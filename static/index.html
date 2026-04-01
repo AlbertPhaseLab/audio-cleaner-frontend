@@ -77,7 +77,7 @@
                 a.href = url;
                 a.download = "cleaned.mp3";
                 a.click();
-
+                window.URL.revokeObjectURL(url);
                 status.innerText = "✅ Audio listo!";
             } catch (error) {
                 status.innerText = "❌ Error procesando audio";
